@@ -18,7 +18,7 @@ Navigate to http://localhost:8080/
 ## Use
 Aside from using the app in the browser you can also change the intial input values.
 
-Now that the server is running, if you open up the root folder in your favorite text-editor you can change the initial input in dist/index.html.
+Now that the server is running, if you open up the root folder in your favorite text-editor you can change the initial args in dist/index.html.
 
 ## dist/Index.html
 This is where everything is rendered. From this file you can change the arguments in the MedalWidget.init function.  I also imported Roboto font because it looked like the text `MEDAL COUNT` and `Title` were different fonts from the rest of the app.
