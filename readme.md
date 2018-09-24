@@ -3,7 +3,7 @@
 ## Introduction
 This is my attempt at the MedalsWidget test.  I used webpack for my bundling, development, and translation needs.  Just follow the documentation and it should explain everything in the App.
 
-I decided not to use any extra libs in this project becuase it felt right making it by hand.  Normally for other projects such as my [app](https://github.com/Afro523/MineralID-Meteor "app") I have used [Material UI](https://material-ui.com/ "Material UI") for a quicker development.
+I decided not to use any extra libs in this project becuase it felt right making it by hand.  Normally for other projects such as my [app](https://github.com/Afro523/MineralID-Meteor "app") I have used [Material UI](https://material-ui.com/ "Material UI") for rapid development.
 
 Enjoy!
 ## Installation
