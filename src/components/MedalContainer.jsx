@@ -6,8 +6,8 @@ import TopBanner from './TopBanner';
 
 class MedalContainer extends Component{
     renderMedals(){
-        return this.props.data.map((obj) => (
-            <CountryBar key={obj.code} countryData={obj}/>
+        return this.props.data.map((obj, index) => (
+            <CountryBar key={obj.code} num={index} countryData={obj}/>
         ));
     }
 
@@ -24,7 +24,6 @@ class MedalContainer extends Component{
                 <TopBanner sort={this.props.sort} sortFunc={this.props.sortFunc}/>
                 <div className="Banner"/>
                 {elToBeRendered}
-                
             </div>
         );
     }

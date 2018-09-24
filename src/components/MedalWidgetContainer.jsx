@@ -13,7 +13,6 @@ class MedalWidgetContainer extends Component{
             sort:''
         };
     }
-    //set the bgposition for flags
     getFlagPosAndTotal(dataSet){
         dataSet = dataSet.sort((a, b) => {
             if(a.code > b.code) return -1;
@@ -28,13 +27,6 @@ class MedalWidgetContainer extends Component{
             dataSet[i].totalMedals = dataSet[i].gold + dataSet[i].silver + dataSet[i].bronze; 
         }
         return dataSet
-    }
-
-    changeSort(sort){
-        this.setState({
-            sort: sort
-        })
-        this.sortByMedals(sort, this.state.medalData);
     }
 
     sortByMedals(sort, data){
@@ -124,6 +116,13 @@ class MedalWidgetContainer extends Component{
         }
     }
 
+    changeSort(sort){
+        this.setState({
+            sort: sort
+        })
+        this.sortByMedals(sort, this.state.medalData);
+    }
+
     componentDidMount() {
         //Get Medals JSON data
         fetch("https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json")
@@ -148,7 +147,11 @@ class MedalWidgetContainer extends Component{
     render(){
         return(
             <div>
-                <MedalContainer sortFunc={this.changeSort.bind(this)} data={this.state.sortedMedalData} sort={this.state.sort}/>
+                <MedalContainer 
+                    sortFunc={this.changeSort.bind(this)} 
+                    data={this.state.sortedMedalData} 
+                    sort={this.state.sort}
+                />
             </div>
         );
     }

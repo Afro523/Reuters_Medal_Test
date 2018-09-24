@@ -5,6 +5,7 @@ class CountryBar extends Component{
     constructor(props) {
         super(props);
     }
+    
     getImageStyle(){
         var imageStyle = {
             backgroundImage:"url(https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png)",
@@ -17,14 +18,15 @@ class CountryBar extends Component{
     }
     render(){
         return(
-            <div className="countryRow" style={{borderBottom:'1px solid grey', padding:5}}>
+            <div className="countryRow">
                 <div style={{float:'left'}}>
+                    <div className="numberColumn">{this.props.num + 1}</div>
                     <div style={this.getImageStyle()}></div>
-                    <div style={{fontWeight:'bold', color: 'grey', paddingBottom:'2px'}}>
+                    <div className="countryCode">
                         {this.props.countryData.code}
                     </div>
                 </div>
-                <div style={{float:'right', color:'grey'}}>
+                <div className="medalFloatingContainer">
                     <div className="column">
                         {this.props.countryData.gold}
                     </div>
