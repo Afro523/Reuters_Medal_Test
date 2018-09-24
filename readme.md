@@ -33,8 +33,8 @@ Here we init the app, this is the entry point in webpack.  There is a little log
 Function that is exposed and takes the 2 arguments given by the incovation of the widget and passes them to document.getElementById and MedalWidgetContainer respectively.
 
 ## src/components/MedalWidgetContainer.jsx
-- Supplied Props
---sort: This is the inital sort status and is put into this.state.initSort.
+* Supplied Props
+  * sort: This is the inital sort status and is put into this.state.initSort.
 
 This is meant to be our data layer to manage the state and a majority of the functionality of the widget.
 #### Functions
@@ -54,10 +54,10 @@ Decivingly small, this function is actually passed down to the TopBanner.jsx to 
 After the component mounts, fetch the JSON data.  Run the provided initial sort category and pass the data to MedalContainer as a prop.
 
 ## src/components/MedalContainer.jsx
-- Supplied Props
---sortFunc: This is the sorting function being passed to the banner.
---data: This is the dataset to be rendered
---sort: Share the current category
+* Supplied Props
+  * sortFunc: This is the sorting function being passed to the banner.
+  * data: This is the dataset to be rendered
+  * sort: Share the current category
 
 This is where the UI elements are rendered together to create the widget.  No state here!
 
@@ -71,22 +71,22 @@ Little bit of logic to determine what should be rendered. The variable elToBeRen
 TopBanner component is rendered here recieves this.props.sort and this.props.sortFunc.  The specs are in the next portion of this readme.
 
 ## src/components/TopBanner.jsx
-- Supplied Props
---sort: String that is used to determine which div gets the activeMedal class attached
---sortFunc: Function which is used to update the state of the app based on which onClick event is fired
+* Supplied Props
+  * sort: String that is used to determine which div gets the activeMedal class attached
+  * sortFunc: Function which is used to update the state of the app based on which onClick event is fired
 
 Here is where the changing of the app occurs.  When clicking on a medalContainer div will execute a change in the application sort state and trigger a re-sorting and rerender the newly sorted array.
 
 ## src/components/Medal.jsx
-- Supplied Props
---color: String that is used to determine the color of the div
+* Supplied Props
+  * color: String that is used to determine the color of the div
 
 Just returns a div with the medal class applied and a background-color that is applied through the props.
 
 ## src/components/CountryBar.jsx
-- Supplied Props
---countryData: Single set of data to represent one country
---num: Used to show rank of country
+* Supplied Props
+  * countryData: Single set of data to represent one country
+  * num: Used to show rank of country
 
 Main use is just to display the data of each country object.
 
